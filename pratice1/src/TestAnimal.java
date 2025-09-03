@@ -1,12 +1,9 @@
 public class TestAnimal {
     public static void main(String[] args) {
-        Animal dog = new Dog();
-        Animal cat = new Cat();
-
-        dog.eat();
-        cat.eat();
-
-        System.out.println("Dog make sound: "+ dog.makeSound());
-        System.out.println("Cat make sound: "+ cat.makeSound());
+        AnimalFactory animalFactory = new AnimalFactory();
+        Animal a1 = animalFactory.getAnimal("feline");
+        System.out.println("a1 sound: "+ a1.makeSound());
+        Animal a2 = animalFactory.getAnimal("canine");
+        System.out.println("a2 sound: "+ a2.makeSound());
     }
 }
